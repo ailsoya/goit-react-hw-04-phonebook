@@ -8,8 +8,8 @@ export const App = () => {
   const [filter, setFilter] = useState('')
 
   useEffect(() => {
-    const current = localStorage.getItem('contacts')
-    setContacts(JSON.parse(current))
+    const startContacts = localStorage.getItem('contacts')
+    setContacts(JSON.parse(startContacts))
   }, [])
 
   const handleChange = evt => {
